@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_NhaCungCap = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btn_TimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.txt_TimKiem = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,26 +53,26 @@
             // 
             // dgv_NhaCungCap
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgv_NhaCungCap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_NhaCungCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_NhaCungCap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_NhaCungCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_NhaCungCap.ColumnHeadersHeight = 4;
             this.dgv_NhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_NhaCungCap.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_NhaCungCap.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_NhaCungCap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_NhaCungCap.Location = new System.Drawing.Point(57, 308);
             this.dgv_NhaCungCap.Name = "dgv_NhaCungCap";
@@ -100,6 +100,8 @@
             this.dgv_NhaCungCap.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_NhaCungCap.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_NhaCungCap.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_NhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NhaCungCap_CellClick);
+            this.dgv_NhaCungCap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NhaCungCap_CellContentClick);
             // 
             // btn_TimKiem
             // 
@@ -117,6 +119,7 @@
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.Size = new System.Drawing.Size(70, 45);
             this.btn_TimKiem.TabIndex = 3;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // txt_TimKiem
             // 
@@ -138,6 +141,7 @@
             this.txt_TimKiem.SelectedText = "";
             this.txt_TimKiem.Size = new System.Drawing.Size(536, 45);
             this.txt_TimKiem.TabIndex = 2;
+            this.txt_TimKiem.TextChanged += new System.EventHandler(this.txt_TimKiem_TextChanged);
             // 
             // btn_ThemMoi
             // 
@@ -153,6 +157,7 @@
             this.btn_ThemMoi.Size = new System.Drawing.Size(180, 45);
             this.btn_ThemMoi.TabIndex = 4;
             this.btn_ThemMoi.Text = "Thêm Mới";
+            this.btn_ThemMoi.Click += new System.EventHandler(this.btn_ThemMoi_Click);
             // 
             // txt_MaNCC
             // 
@@ -172,6 +177,7 @@
             this.txt_MaNCC.SelectedText = "";
             this.txt_MaNCC.Size = new System.Drawing.Size(244, 36);
             this.txt_MaNCC.TabIndex = 5;
+            this.txt_MaNCC.TextChanged += new System.EventHandler(this.txt_MaNCC_TextChanged);
             // 
             // label1
             // 
@@ -211,6 +217,7 @@
             this.txt_TenNCC.SelectedText = "";
             this.txt_TenNCC.Size = new System.Drawing.Size(244, 36);
             this.txt_TenNCC.TabIndex = 7;
+            this.txt_TenNCC.TextChanged += new System.EventHandler(this.txt_TenNCC_TextChanged);
             // 
             // label3
             // 
@@ -240,6 +247,7 @@
             this.txt_DienThoai.SelectedText = "";
             this.txt_DienThoai.Size = new System.Drawing.Size(244, 36);
             this.txt_DienThoai.TabIndex = 9;
+            this.txt_DienThoai.TextChanged += new System.EventHandler(this.txt_DienThoai_TextChanged);
             // 
             // label4
             // 
@@ -269,6 +277,7 @@
             this.txt_Email.SelectedText = "";
             this.txt_Email.Size = new System.Drawing.Size(327, 36);
             this.txt_Email.TabIndex = 11;
+            this.txt_Email.TextChanged += new System.EventHandler(this.txt_Email_TextChanged);
             // 
             // label5
             // 
@@ -298,6 +307,7 @@
             this.txt_DiaChi.SelectedText = "";
             this.txt_DiaChi.Size = new System.Drawing.Size(707, 36);
             this.txt_DiaChi.TabIndex = 13;
+            this.txt_DiaChi.TextChanged += new System.EventHandler(this.txt_DiaChi_TextChanged);
             // 
             // btn_CapNhat
             // 
@@ -313,6 +323,7 @@
             this.btn_CapNhat.Size = new System.Drawing.Size(180, 45);
             this.btn_CapNhat.TabIndex = 15;
             this.btn_CapNhat.Text = "Cập nhật";
+            this.btn_CapNhat.Click += new System.EventHandler(this.btn_CapNhat_Click);
             // 
             // btn_Xoa
             // 
@@ -328,6 +339,7 @@
             this.btn_Xoa.Size = new System.Drawing.Size(180, 45);
             this.btn_Xoa.TabIndex = 16;
             this.btn_Xoa.Text = "Xóa";
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // label6
             // 
