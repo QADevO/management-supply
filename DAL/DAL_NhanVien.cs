@@ -10,7 +10,7 @@ namespace DAL
 {
     public class DAL_NhanVien
     {
-        chuoicungungnuocngotDataContext sql = new chuoicungungnuocngotDataContext();
+        chuoicungnungnuocngotDataContext sql = new chuoicungnungnuocngotDataContext();
 
         public bool Login(string email, string password)
         {
