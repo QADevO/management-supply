@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using GUI.HoaDon;
 using GUI.SanPham;
 using GUI.DaiLy;
+using GUI.NguyenLieu;
 
 namespace GUI.TrangChu
 {
@@ -82,5 +83,10 @@ namespace GUI.TrangChu
             f.Show();
         }
 
+        private void btn_NguyenLieu_Click(object sender, EventArgs e)
+        {
+            lbl_TieuDe.Text = "Nguyên liệu";
+            AddControls(new FrmNguyenLieu());
+        }
     }
 }
