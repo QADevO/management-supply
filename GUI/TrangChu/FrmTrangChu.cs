@@ -1,5 +1,6 @@
 ﻿using GUI.DangNhap;
 using GUI.NhanVien;
+using GUI.NhaCungCap;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI.HoaDon;
+using GUI.SanPham;
+using GUI.DaiLy;
 
 namespace GUI.TrangChu
 {
@@ -35,12 +39,14 @@ namespace GUI.TrangChu
         private void Btn_NhaCungCap_Click(object sender, EventArgs e)
         {
             lbl_TieuDe.Text = "Quản Lý Nhà Cung Cấp";
-           
+            AddControls(new FrmNhaCungCap());
+
         }
 
         private void Btn_HoaDon_Click(object sender, EventArgs e)
         {
             lbl_TieuDe.Text = "Quản Lý Hóa Đơn";
+            AddControls(new FrmHoaDon());
         }
 
         private void Btn_NhanVien_Click(object sender, EventArgs e)
@@ -52,11 +58,13 @@ namespace GUI.TrangChu
         private void Btn_SanPham_Click(object sender, EventArgs e)
         {
             lbl_TieuDe.Text = "Quản Lý Sản Phẩm";
+            AddControls(new FrmSanPham());
         }
 
         private void Btn_NhaPhanPhoi_Click(object sender, EventArgs e)
         {
             lbl_TieuDe.Text = "Quản Lý Nhà Phân Phối";
+            AddControls(new FrmDaiLy());
         }
 
         static FrmTrangChu _obj;
