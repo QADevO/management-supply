@@ -47,9 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL_DaiLy.cs" />
     <Compile Include="BLL_NguyenLieu.cs" />
     <Compile Include="BLL_NhaCungCap.cs" />
     <Compile Include="BLL_NhanVien.cs" />
+    <Compile Include="BLL_PhieuNhap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

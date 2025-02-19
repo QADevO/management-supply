@@ -43,6 +43,7 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbl_TieuDe = new System.Windows.Forms.Label();
             this.panel_NoiDung = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_HoaDonNhap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -53,6 +54,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.guna2Panel1.Controls.Add(this.btn_HoaDonNhap);
             this.guna2Panel1.Controls.Add(this.btn_NguyenLieu);
             this.guna2Panel1.Controls.Add(this.btn_DangXuat);
             this.guna2Panel1.Controls.Add(this.btn_NhanVien);
@@ -269,6 +271,26 @@
             this.panel_NoiDung.Size = new System.Drawing.Size(1686, 976);
             this.panel_NoiDung.TabIndex = 2;
             // 
+            // btn_HoaDonNhap
+            // 
+            this.btn_HoaDonNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_HoaDonNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_HoaDonNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_HoaDonNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_HoaDonNhap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_HoaDonNhap.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HoaDonNhap.ForeColor = System.Drawing.Color.White;
+            this.btn_HoaDonNhap.Image = global::GUI.Properties.Resources.multiple_users_silhouette;
+            this.btn_HoaDonNhap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_HoaDonNhap.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_HoaDonNhap.Location = new System.Drawing.Point(3, 621);
+            this.btn_HoaDonNhap.Name = "btn_HoaDonNhap";
+            this.btn_HoaDonNhap.Size = new System.Drawing.Size(199, 50);
+            this.btn_HoaDonNhap.TabIndex = 10;
+            this.btn_HoaDonNhap.Text = "Hóa Đơn Nhập";
+            this.btn_HoaDonNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_HoaDonNhap.Click += new System.EventHandler(this.btn_HoaDonNhap_Click);
+            // 
             // FrmTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,5 +329,6 @@
         private System.Windows.Forms.Label lbl_TieuDe;
         private Guna.UI2.WinForms.Guna2Panel panel_NoiDung;
         private Guna.UI2.WinForms.Guna2Button btn_NguyenLieu;
+        private Guna.UI2.WinForms.Guna2Button btn_HoaDonNhap;
     }
 }
