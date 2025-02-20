@@ -16,5 +16,29 @@ namespace BLL
         {
             return dalSanPham.GetAllSanPham();
         }
+
+        //thêm đại lý
+        public bool AddNewSP(SanPham sp)
+        {
+            return dalSanPham.AddSP(sp);
+        }
+
+        // Sửa thông tin đại  lý
+        public bool UpdateSPInfo(SanPham sp)
+        {
+            return dalSanPham.UpdateSP(sp);
+        }
+
+        // Xóa đại lý
+        public bool DeleteSP(int maDL)
+        {
+            return dalSanPham.DeleteSP(maDL);
+        }
+
+        // Tìm kiếm nhà cung cấp
+        public List<SanPham> SearchSPByName(string keyword)
+        {
+            return dalSanPham.SearchSPByName(keyword);
+        }
     }
 }
