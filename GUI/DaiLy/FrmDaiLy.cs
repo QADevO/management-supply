@@ -107,7 +107,6 @@ namespace GUI.DaiLy
             {
                 MessageBox.Show("Cập nhật thông tin đại lý thất bại!");
             }
-
         }
 
         private void Btn_ThemMoi_Click(object sender, EventArgs e)
