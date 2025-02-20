@@ -278,7 +278,6 @@ namespace GUI.NguyenLieu
         {
             List<DTO.NhaCungCap> danhSachNCC = ncc.GetAllNCC();
 
-            // Gán dữ liệu vào ComboBox
             cbb_nhaCungCap.DataSource = danhSachNCC;
             cbb_nhaCungCap.DisplayMember = "TenNCC";  // Tên cột hiển thị
             cbb_nhaCungCap.ValueMember = "MaNCC";     // Giá trị ẩn
