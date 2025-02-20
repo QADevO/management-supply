@@ -47,11 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="BLL_LoSanPham.cs" />
-=======
     <Compile Include="BLL_DaiLy.cs" />
->>>>>>> c6e4f98134054521b5ea2a7a50cbc5b1c96395d4
     <Compile Include="BLL_NguyenLieu.cs" />
     <Compile Include="BLL_NhaCungCap.cs" />
     <Compile Include="BLL_NhanVien.cs" />

@@ -17,6 +17,7 @@ namespace GUI.HoaDon
     {
         private BLL_SanPham BLL_SP = new BLL_SanPham();
         private BLL_LoSanPham BLL_LoSP = new BLL_LoSanPham();
+        private BLL_DaiLy BLL_DaiLy = new BLL_DaiLy();
         public FrmHoaDon()
         {
             InitializeComponent();
@@ -31,17 +32,20 @@ namespace GUI.HoaDon
         {
             dgv_SP.DataSource = BLL_SP.GetAllSanPham();
         }
-
+        private void loadingDaiLy()
+        {
+            List<DTO.DaiLy> dsDL = BLL_DaiLy.GetAllDL();
+            cbb_listDaiLy.DataSource = dsDL;
+            cbb_listDaiLy.DisplayMember = "TenDL";
+            cbb_listDaiLy.ValueMember = "MaDL";
+        }
         private void FrmHoaDon_Load(object sender, EventArgs e)
         {
             LoadingSanPham();
+            loadingDaiLy();
         }
 
-        private void dgv_loSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+       
         private void dgv_SP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -57,6 +61,29 @@ namespace GUI.HoaDon
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void cbb_listDaiLy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void dgv_loSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgv_loSanPham.Rows[e.RowIndex];
+
+                txt_MaLoHang.Text = row.Cells["MaLoSP"].Value?.ToString();
+            }
+        }
+
+        private void txt_MaLoHang_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_soLuongBan_TextChanged(object sender, EventArgs e)
         {
 
         }
