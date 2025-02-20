@@ -46,7 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="DAL_LoSanPham.cs" />
+=======
+    <Compile Include="DAL_DaiLy.cs" />
+>>>>>>> c6e4f98134054521b5ea2a7a50cbc5b1c96395d4
     <Compile Include="DAL_NguyenLieu.cs" />
     <Compile Include="DAL_NhaCungCap.cs" />
     <Compile Include="DAL_NhanVien.cs" />

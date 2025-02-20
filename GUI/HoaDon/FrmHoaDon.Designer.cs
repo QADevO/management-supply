@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -270,10 +271,15 @@
             this.guna2Button2.TabIndex = 2;
             this.guna2Button2.Text = "tạo hóa đơn";
             // 
+=======
+            this.SuspendLayout();
+            // 
+>>>>>>> c6e4f98134054521b5ea2a7a50cbc5b1c96395d4
             // FrmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1676, 936);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.guna2GroupBox1);
@@ -287,6 +293,11 @@
             this.guna2GroupBox1.ResumeLayout(false);
             this.dgv_.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SP)).EndInit();
+=======
+            this.ClientSize = new System.Drawing.Size(1065, 625);
+            this.Name = "FrmHoaDon";
+            this.Text = "FrmHoaDon";
+>>>>>>> c6e4f98134054521b5ea2a7a50cbc5b1c96395d4
             this.ResumeLayout(false);
 
         }
