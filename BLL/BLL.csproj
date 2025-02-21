@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL_DaiLy.cs" />
+    <Compile Include="BLL_HoaDon.cs" />
     <Compile Include="BLL_LoSanPham.cs" />
     <Compile Include="BLL_NguyenLieu.cs" />
     <Compile Include="BLL_NhaCungCap.cs" />

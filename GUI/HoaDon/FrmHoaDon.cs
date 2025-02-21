@@ -48,6 +48,17 @@ namespace GUI.HoaDon
             dgv_invoice_detail.Columns[3].Name = "Đơn Vị Tính";
             dgv_invoice_detail.Columns[4].Name = "Giá";
             dgv_invoice_detail.Columns[5].Name = "Thành Tiền";
+
+            // Tạo cột button nếu chưa có
+            if (dgv_invoice_detail.Columns["btnDelete"] == null)
+            {
+                DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
+                btnDelete.Name = "btnDelete";
+                btnDelete.HeaderText = "Xóa";
+                btnDelete.Text = "Xóa";
+                btnDelete.UseColumnTextForButtonValue = true; // Hiển thị chữ "Xóa"
+                dgv_invoice_detail.Columns.Add(btnDelete);
+            }
         }
 
        
@@ -185,7 +196,25 @@ namespace GUI.HoaDon
 
         private void dgv_invoice_detail_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Kiểm tra nếu người dùng nhấn vào cột "Xóa"
+            if (e.ColumnIndex == dgv_invoice_detail.Columns["btnDelete"].Index && e.RowIndex >= 0)
+            {
+                // Hiển thị hộp thoại xác nhận xóa
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa dòng này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    dgv_invoice_detail.Rows.RemoveAt(e.RowIndex);
+                }
+            }
+        }
+
+       
+
+        private void btn_createHoaDon_Click(object sender, EventArgs e)
+        {
 
         }
+
     }
 }
