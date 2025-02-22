@@ -16,6 +16,7 @@ using GUI.DaiLy;
 using GUI.NguyenLieu;
 using GUI.HoaDonNhap;
 using BLL;
+using GUI.NhapLo;
 
 namespace GUI.TrangChu
 {
@@ -30,6 +31,7 @@ namespace GUI.TrangChu
             btn_HoaDon.Click += Btn_HoaDon_Click;
             btn_NhaCungCap.Click += Btn_NhaCungCap_Click;
             btn_DangXuat.Click += Btn_DangXuat_Click;
+            
         }
 
         private void Btn_DangXuat_Click(object sender, EventArgs e)
@@ -97,6 +99,12 @@ namespace GUI.TrangChu
             AddControls(new FrmHoaDonNhap());
         }
 
+        private void btn_NhapLoHang_Click(object sender, EventArgs e)
+        {
+            lbl_TieuDe.Text = "Nhập lô hàng";
+            AddControls(new FrmNhapLo());
+        }
+
         private void txt_name_admin_Click(object sender, EventArgs e)
         {
 
@@ -111,5 +119,7 @@ namespace GUI.TrangChu
         {
 
         }
+
+        
     }
 }

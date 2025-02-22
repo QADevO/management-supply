@@ -199,5 +199,10 @@ namespace GUI.NhaCungCap
                 txt_DienThoai.Text = row.Cells["SoDienThoai"].Value.ToString(); 
             }
         }
+
+        private void FrmNhaCungCap_Load(object sender, EventArgs e)
+        {
+            dgv_NhaCungCap.ColumnHeadersHeight = 40;
+        }
     }
 }

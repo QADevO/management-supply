@@ -145,6 +145,9 @@ namespace GUI.NguyenLieu
                 btnXoa.UseColumnTextForButtonValue = true;
                 dgv_HD_NhapHang.Columns.Add(btnXoa);
             }
+
+            dgv_HD_NhapHang.ColumnHeadersHeight = 40;
+            dgv_NguyenLieu.ColumnHeadersHeight = 40;
         }
 
         private void btn_SL_NhapThem_TextChanged(object sender, EventArgs e)

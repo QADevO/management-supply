@@ -159,6 +159,7 @@ namespace GUI.SanPham
         private void FrmSanPham_Load(object sender, EventArgs e)
         {
             LoadingSanPham();
+            dgv_DSSP.ColumnHeadersHeight = 40;
         }
 
         private void LoadingSanPham()

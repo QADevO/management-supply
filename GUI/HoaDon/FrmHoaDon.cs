@@ -60,6 +60,10 @@ namespace GUI.HoaDon
                 btnDelete.UseColumnTextForButtonValue = true; // Hiển thị chữ "Xóa"
                 dgv_invoice_detail.Columns.Add(btnDelete);
             }
+
+            dgv_SP.ColumnHeadersHeight = 40;
+            dgv_invoice_detail.ColumnHeadersHeight = 40;
+            dgv_loSanPham.ColumnHeadersHeight = 40;
         }
 
        

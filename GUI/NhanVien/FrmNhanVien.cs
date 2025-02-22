@@ -161,6 +161,7 @@ namespace GUI.NhanVien
         private void FrmNhanVien_Load(object sender, EventArgs e)
         {
             LoadNhanVien();
+            dgv_NhanVien.ColumnHeadersHeight = 40;
         }
         // Hiển thị danh sách nhân viên lên DataGridView
         private void LoadNhanVien()

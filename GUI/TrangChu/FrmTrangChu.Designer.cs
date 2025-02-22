@@ -44,6 +44,7 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbl_TieuDe = new System.Windows.Forms.Label();
             this.panel_NoiDung = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_NhapLoHang = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -54,6 +55,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.guna2Panel1.Controls.Add(this.btn_NhapLoHang);
             this.guna2Panel1.Controls.Add(this.btn_HoaDonNhap);
             this.guna2Panel1.Controls.Add(this.btn_NguyenLieu);
             this.guna2Panel1.Controls.Add(this.btn_DangXuat);
@@ -293,6 +295,26 @@
             this.panel_NoiDung.TabIndex = 2;
             this.panel_NoiDung.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_NoiDung_Paint);
             // 
+            // btn_NhapLoHang
+            // 
+            this.btn_NhapLoHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_NhapLoHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_NhapLoHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_NhapLoHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_NhapLoHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_NhapLoHang.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NhapLoHang.ForeColor = System.Drawing.Color.White;
+            this.btn_NhapLoHang.Image = global::GUI.Properties.Resources.multiple_users_silhouette;
+            this.btn_NhapLoHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_NhapLoHang.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_NhapLoHang.Location = new System.Drawing.Point(3, 677);
+            this.btn_NhapLoHang.Name = "btn_NhapLoHang";
+            this.btn_NhapLoHang.Size = new System.Drawing.Size(199, 50);
+            this.btn_NhapLoHang.TabIndex = 11;
+            this.btn_NhapLoHang.Text = "Nhập Lô Hàng";
+            this.btn_NhapLoHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_NhapLoHang.Click += new System.EventHandler(this.btn_NhapLoHang_Click);
+            // 
             // FrmTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,5 +355,6 @@
         private Guna.UI2.WinForms.Guna2Panel panel_NoiDung;
         private Guna.UI2.WinForms.Guna2Button btn_NguyenLieu;
         private Guna.UI2.WinForms.Guna2Button btn_HoaDonNhap;
+        private Guna.UI2.WinForms.Guna2Button btn_NhapLoHang;
     }
 }

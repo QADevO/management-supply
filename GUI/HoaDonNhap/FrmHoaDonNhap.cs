@@ -34,6 +34,9 @@ namespace GUI.HoaDonNhap
         {
             dgv_hoadonnhap.DataSource = bll.GetAllInvoices();
             dgv_hoadonnhap.SelectionChanged += Dgv_hoadonnhap_SelectionChanged;
+
+            dgv_hoadonnhap.ColumnHeadersHeight = 40;
+            dgv_hoadonnhap_detail.ColumnHeadersHeight = 40;
         }
 
         private void Dgv_hoadonnhap_SelectionChanged(object sender, EventArgs e)

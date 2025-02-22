@@ -47,17 +47,9 @@
             this.txt_DonViTinh = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_MaSP = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.dt_HanSuDung = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dt_NgaySX = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_MaLoSP = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
-            this.guna2GroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -339,108 +331,12 @@
             this.txt_MaSP.Size = new System.Drawing.Size(185, 36);
             this.txt_MaSP.TabIndex = 0;
             // 
-            // guna2GroupBox2
-            // 
-            this.guna2GroupBox2.Controls.Add(this.dt_HanSuDung);
-            this.guna2GroupBox2.Controls.Add(this.dt_NgaySX);
-            this.guna2GroupBox2.Controls.Add(this.label7);
-            this.guna2GroupBox2.Controls.Add(this.label8);
-            this.guna2GroupBox2.Controls.Add(this.label9);
-            this.guna2GroupBox2.Controls.Add(this.txt_MaLoSP);
-            this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox2.Location = new System.Drawing.Point(669, 95);
-            this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Size = new System.Drawing.Size(612, 220);
-            this.guna2GroupBox2.TabIndex = 22;
-            this.guna2GroupBox2.Text = "Thông tin lô sản phẩm";
-            // 
-            // dt_HanSuDung
-            // 
-            this.dt_HanSuDung.Checked = true;
-            this.dt_HanSuDung.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dt_HanSuDung.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_HanSuDung.ForeColor = System.Drawing.Color.Black;
-            this.dt_HanSuDung.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dt_HanSuDung.Location = new System.Drawing.Point(226, 163);
-            this.dt_HanSuDung.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dt_HanSuDung.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dt_HanSuDung.Name = "dt_HanSuDung";
-            this.dt_HanSuDung.Size = new System.Drawing.Size(280, 36);
-            this.dt_HanSuDung.TabIndex = 7;
-            this.dt_HanSuDung.Value = new System.DateTime(2025, 2, 15, 21, 23, 26, 363);
-            // 
-            // dt_NgaySX
-            // 
-            this.dt_NgaySX.Checked = true;
-            this.dt_NgaySX.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dt_NgaySX.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_NgaySX.ForeColor = System.Drawing.Color.Black;
-            this.dt_NgaySX.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dt_NgaySX.Location = new System.Drawing.Point(226, 80);
-            this.dt_NgaySX.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dt_NgaySX.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dt_NgaySX.Name = "dt_NgaySX";
-            this.dt_NgaySX.Size = new System.Drawing.Size(280, 36);
-            this.dt_NgaySX.TabIndex = 6;
-            this.dt_NgaySX.Value = new System.DateTime(2025, 2, 15, 21, 23, 26, 363);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(226, 52);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 25);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Ngày sản xuất";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(226, 135);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 25);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Hạn sử dụng";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(17, 52);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 25);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Mã lô sản phẩm";
-            // 
-            // txt_MaLoSP
-            // 
-            this.txt_MaLoSP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_MaLoSP.DefaultText = "";
-            this.txt_MaLoSP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_MaLoSP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_MaLoSP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MaLoSP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MaLoSP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MaLoSP.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_MaLoSP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MaLoSP.Location = new System.Drawing.Point(17, 80);
-            this.txt_MaLoSP.Name = "txt_MaLoSP";
-            this.txt_MaLoSP.PasswordChar = '\0';
-            this.txt_MaLoSP.PlaceholderText = "";
-            this.txt_MaLoSP.SelectedText = "";
-            this.txt_MaLoSP.Size = new System.Drawing.Size(185, 36);
-            this.txt_MaLoSP.TabIndex = 0;
-            // 
             // FrmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1700, 1000);
             this.ControlBox = false;
-            this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(label1);
             this.Controls.Add(this.dgv_DSSP);
@@ -456,8 +352,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            this.guna2GroupBox2.ResumeLayout(false);
-            this.guna2GroupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,12 +374,5 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txt_DonViTinh;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox txt_MaLoSP;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dt_HanSuDung;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dt_NgaySX;
     }
 }

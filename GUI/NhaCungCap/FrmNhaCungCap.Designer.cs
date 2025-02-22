@@ -377,6 +377,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNhaCungCap";
             this.Text = "FrmNhaCungCap";
+            this.Load += new System.EventHandler(this.FrmNhaCungCap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhaCungCap)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
