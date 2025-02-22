@@ -111,6 +111,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QL_HoaDOnNHap\frm_HoaDOnNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_HoaDOnNHap\frm_HoaDOnNhap.Designer.cs">
+      <DependentUpon>frm_HoaDOnNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QL_HoaDOnNHap\Frm_QL_HoaDonXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_HoaDOnNHap\Frm_QL_HoaDonXuat.Designer.cs">
+      <DependentUpon>Frm_QL_HoaDonXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="SanPham\FrmSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +166,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QL_HoaDOnNHap\frm_HoaDOnNhap.resx">
+      <DependentUpon>frm_HoaDOnNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_HoaDOnNHap\Frm_QL_HoaDonXuat.resx">
+      <DependentUpon>Frm_QL_HoaDonXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SanPham\FrmSanPham.resx">
       <DependentUpon>FrmSanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +243,14 @@
   <ItemGroup>
     <None Include="Resources\search.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\c_invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HD_imp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HD_Exp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

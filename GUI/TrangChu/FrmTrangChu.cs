@@ -15,6 +15,8 @@ using GUI.SanPham;
 using GUI.DaiLy;
 using GUI.NguyenLieu;
 using GUI.HoaDonNhap;
+using BLL;
+using GUI.QL_HoaDOnNHap;
 
 namespace GUI.TrangChu
 {
@@ -29,6 +31,7 @@ namespace GUI.TrangChu
             btn_HoaDon.Click += Btn_HoaDon_Click;
             btn_NhaCungCap.Click += Btn_NhaCungCap_Click;
             btn_DangXuat.Click += Btn_DangXuat_Click;
+            
         }
 
         private void Btn_DangXuat_Click(object sender, EventArgs e)
@@ -47,7 +50,7 @@ namespace GUI.TrangChu
 
         private void Btn_HoaDon_Click(object sender, EventArgs e)
         {
-            lbl_TieuDe.Text = "Quản Lý Hóa Đơn";
+            lbl_TieuDe.Text = "Tạo Hóa đơn nhập";
             AddControls(new FrmHoaDon());
         }
 
@@ -94,6 +97,32 @@ namespace GUI.TrangChu
         {
             lbl_TieuDe.Text = "Hóa đơn nhập";
             AddControls(new FrmHoaDonNhap());
+        }
+
+        private void btn_NhapLoHang_Click(object sender, EventArgs e)
+        {
+            lbl_TieuDe.Text = "Quản lý hóa đơn xuất";
+            AddControls(new Frm_QL_HoaDonXuat());
+        }
+
+        private void txt_name_admin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmTrangChu_Load(object sender, EventArgs e)
+        {
+            txt_name_admin.Text = CurrentUser.Username;
+        }
+
+        private void panel_NoiDung_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_HoaDon_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

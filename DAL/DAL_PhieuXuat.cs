@@ -8,24 +8,24 @@ using DTO;
 
 namespace DAL
 {
-    public class DAL_PhieuNhap
+    public class DAL_PhieuXuat
     {
         chuoicungnungnuocngotDataContext sql = new chuoicungnungnuocngotDataContext();
-        public bool CreateInvoiceWithDetails(PhieuNhapNguyenLieu phieunhap, List<ChiTietPhieuNhapNguyenLieu> chitietphieunhap)
+        public bool CreateInvoiceWithDetails(HoaDon hoadon, List<ChiTietHoaDon> ctHoaDOn)
         {
             using (var transaction = new TransactionScope())
             {
                 try
                 {
-                    sql.PhieuNhapNguyenLieus.InsertOnSubmit(phieunhap);
+                    sql.HoaDons.InsertOnSubmit(hoadon);
                     sql.SubmitChanges();
 
-                    int maNhapHang = phieunhap.MaNhap;
+                    int maHD = hoadon.MaHD;
 
-                    foreach (var detail in chitietphieunhap)
+                    foreach (var detail in ctHoaDOn)
                     {
-                        detail.MaPhieuNhap = maNhapHang;
-                        sql.ChiTietPhieuNhapNguyenLieus.InsertOnSubmit(detail);
+                        detail.MaHD = maHD;
+                        sql.ChiTietHoaDons.InsertOnSubmit(detail);
                     }
                     sql.SubmitChanges();
 
@@ -39,16 +39,14 @@ namespace DAL
                 }
             }
         }
-        public List<PhieuNhapNguyenLieu> GetAllInvoices()
+        public List<HoaDon> GetDanhSachPhieuXuat()
         {
-            return sql.PhieuNhapNguyenLieus.ToList();
+            return sql.HoaDons.ToList();
         }
 
-        public List<ChiTietPhieuNhapNguyenLieu> GetInvoiceDetails(int maPhieuNhap)
+        public List<ChiTietHoaDon> GetChiTietPhieuXuat(int maHD)
         {
-            return sql.ChiTietPhieuNhapNguyenLieus
-                      .Where(ct => ct.MaPhieuNhap == maPhieuNhap)
-                      .ToList();
+            return sql.ChiTietHoaDons.Where(ct => ct.MaHD == maHD).ToList();
         }
 
 

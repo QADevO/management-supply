@@ -52,6 +52,7 @@
     <Compile Include="DAL_NhaCungCap.cs" />
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_PhieuNhap.cs" />
+    <Compile Include="DAL_PhieuXuat.cs" />
     <Compile Include="DAL_SanPham.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

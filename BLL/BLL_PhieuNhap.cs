@@ -26,5 +26,14 @@ namespace BLL
 
             return dalPhieuNhap.CreateInvoiceWithDetails(phieuNhap, chiTietPhieuNhap);
         }
+        public List<PhieuNhapNguyenLieu> GetAllInvoices()
+        {
+            return dalPhieuNhap.GetAllInvoices();
+        }
+        public List<ChiTietPhieuNhapNguyenLieu> GetInvoiceDetails(int maPhieuNhap)
+        {
+            return dalPhieuNhap.GetInvoiceDetails(maPhieuNhap);
+        }
+
     }
 }

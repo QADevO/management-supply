@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
+using System.Text.RegularExpressions;
 
 namespace GUI.NguyenLieu
 {
@@ -144,6 +145,9 @@ namespace GUI.NguyenLieu
                 btnXoa.UseColumnTextForButtonValue = true;
                 dgv_HD_NhapHang.Columns.Add(btnXoa);
             }
+
+            dgv_HD_NhapHang.ColumnHeadersHeight = 40;
+            dgv_NguyenLieu.ColumnHeadersHeight = 40;
         }
 
         private void btn_SL_NhapThem_TextChanged(object sender, EventArgs e)
@@ -218,12 +222,16 @@ namespace GUI.NguyenLieu
                 MessageBox.Show("Không có nguyên liệu nào trong hóa đơn nhập.");
                 return;
             }
-
+            int mancc = Convert.ToInt32(cbb_nhaCungCap.SelectedValue);
             // Tạo đối tượng phiếu nhập nguyên liệu mới
             PhieuNhapNguyenLieu phieuNhap = new PhieuNhapNguyenLieu
             {
                 NgayNhap = DateTime.Now,
-                TongTien = 0 // Sẽ tính sau
+                TongTien = 0, // Sẽ tính sau
+                TrinhTrangDonHang = 1,
+                MaNhanVien = CurrentUser.UserID,
+                MaNCC = mancc
+
             };
 
             List<ChiTietPhieuNhapNguyenLieu> chiTietPhieuNhapList = new List<ChiTietPhieuNhapNguyenLieu>();

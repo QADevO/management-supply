@@ -17,7 +17,10 @@ namespace BLL
         {
             return dal_nhanvien.Login(email, password);
         }
-
+        public NhanVien GetUserByEmailAndPassword(string email, string password)
+        {
+            return dal_nhanvien.GetUserByEmailAndPassword(email, password);
+        }
         // Lấy danh sách nhân viên
         public List<NhanVien> GetAllNhanVien()
         {

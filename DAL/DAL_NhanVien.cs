@@ -23,6 +23,18 @@ namespace DAL
                 return false;
             }
         }
+        public NhanVien GetUserByEmailAndPassword(string email, string password)
+        {
+            try
+            {
+                return sql.NhanViens.FirstOrDefault(nv => nv.Email == email && nv.MatKhau == password);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
 
         // Hiển thị danh sách nhân viên
         public List<NhanVien> GetAllNhanVien()
