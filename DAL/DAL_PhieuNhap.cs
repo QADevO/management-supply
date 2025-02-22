@@ -39,5 +39,18 @@ namespace DAL
                 }
             }
         }
+        public List<PhieuNhapNguyenLieu> GetAllInvoices()
+        {
+            return sql.PhieuNhapNguyenLieus.ToList();
+        }
+
+        public List<ChiTietPhieuNhapNguyenLieu> GetInvoiceDetails(int maPhieuNhap)
+        {
+            return sql.ChiTietPhieuNhapNguyenLieus
+                      .Where(ct => ct.MaPhieuNhap == maPhieuNhap)
+                      .ToList();
+        }
+
+
     }
 }
