@@ -23,6 +23,8 @@ namespace GUI.DaiLy
             btn_CapNhat.Click += Btn_CapNhat_Click;
             btn_TimKiem.Click += Btn_TimKiem_Click;
             btn_Xoa.Click += Btn_Xoa_Click;
+
+
         }
 
         private void Btn_Xoa_Click(object sender, EventArgs e)
@@ -191,6 +193,11 @@ namespace GUI.DaiLy
             txt_Email.Clear();
             txt_DiaChi.Clear();
             txt_DienThoai.Clear();
+        }
+
+        private void FrmDaiLy_Load(object sender, EventArgs e)
+        {
+            dgv_DaiLy.ColumnHeadersHeight = 40;
         }
     }
 }

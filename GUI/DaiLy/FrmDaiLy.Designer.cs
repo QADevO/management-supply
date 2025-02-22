@@ -366,6 +366,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDaiLy";
             this.Text = "FrmDaiLy";
+            this.Load += new System.EventHandler(this.FrmDaiLy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DaiLy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
