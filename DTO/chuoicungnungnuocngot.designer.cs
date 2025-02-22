@@ -63,7 +63,7 @@ namespace DTO
     #endregion
 		
 		public chuoicungnungnuocngotDataContext() : 
-				base(global::DTO.Properties.Settings.Default.ChuoiCungUngNuocNgotConnectionString, mappingSource)
+				base(global::DTO.Properties.Settings.Default.ChuoiCungUngNuocNgotConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}

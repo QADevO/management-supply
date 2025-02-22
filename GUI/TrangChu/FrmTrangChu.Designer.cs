@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txt_name_admin = new System.Windows.Forms.Label();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbl_TieuDe = new System.Windows.Forms.Label();
+            this.panel_NoiDung = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_NhapLoHang = new Guna.UI2.WinForms.Guna2Button();
             this.btn_HoaDonNhap = new Guna.UI2.WinForms.Guna2Button();
             this.btn_NguyenLieu = new Guna.UI2.WinForms.Guna2Button();
@@ -37,19 +42,14 @@
             this.btn_HoaDon = new Guna.UI2.WinForms.Guna2Button();
             this.btn_SanPham = new Guna.UI2.WinForms.Guna2Button();
             this.btn_NhaPhanPhoi = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.txt_name_admin = new System.Windows.Forms.Label();
             this.btn_NhaCungCap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbl_TieuDe = new System.Windows.Forms.Label();
-            this.panel_NoiDung = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -71,6 +71,54 @@
             this.guna2Panel1.Size = new System.Drawing.Size(202, 1046);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel2.Controls.Add(this.txt_name_admin);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 208);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(202, 50);
+            this.guna2Panel2.TabIndex = 3;
+            // 
+            // txt_name_admin
+            // 
+            this.txt_name_admin.AutoSize = true;
+            this.txt_name_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_admin.Location = new System.Drawing.Point(62, 10);
+            this.txt_name_admin.Name = "txt_name_admin";
+            this.txt_name_admin.Size = new System.Drawing.Size(102, 31);
+            this.txt_name_admin.TabIndex = 0;
+            this.txt_name_admin.Text = "ADMIN";
+            this.txt_name_admin.Click += new System.EventHandler(this.txt_name_admin_Click);
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.guna2Panel3.Controls.Add(this.lbl_TieuDe);
+            this.guna2Panel3.Location = new System.Drawing.Point(199, -3);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(1710, 50);
+            this.guna2Panel3.TabIndex = 1;
+            // 
+            // lbl_TieuDe
+            // 
+            this.lbl_TieuDe.AutoSize = true;
+            this.lbl_TieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TieuDe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_TieuDe.Location = new System.Drawing.Point(671, 9);
+            this.lbl_TieuDe.Name = "lbl_TieuDe";
+            this.lbl_TieuDe.Size = new System.Drawing.Size(322, 31);
+            this.lbl_TieuDe.TabIndex = 0;
+            this.lbl_TieuDe.Text = "Quản Lý Nhà Cung Cấp";
+            // 
+            // panel_NoiDung
+            // 
+            this.panel_NoiDung.Location = new System.Drawing.Point(206, 53);
+            this.panel_NoiDung.Name = "panel_NoiDung";
+            this.panel_NoiDung.Size = new System.Drawing.Size(1686, 976);
+            this.panel_NoiDung.TabIndex = 2;
+            this.panel_NoiDung.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_NoiDung_Paint);
+            // 
             // btn_NhapLoHang
             // 
             this.btn_NhapLoHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -80,7 +128,7 @@
             this.btn_NhapLoHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_NhapLoHang.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NhapLoHang.ForeColor = System.Drawing.Color.White;
-            this.btn_NhapLoHang.Image = global::GUI.Properties.Resources.multiple_users_silhouette;
+            this.btn_NhapLoHang.Image = global::GUI.Properties.Resources.HD_Exp;
             this.btn_NhapLoHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_NhapLoHang.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_NhapLoHang.Location = new System.Drawing.Point(3, 677);
@@ -100,7 +148,7 @@
             this.btn_HoaDonNhap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_HoaDonNhap.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_HoaDonNhap.ForeColor = System.Drawing.Color.White;
-            this.btn_HoaDonNhap.Image = global::GUI.Properties.Resources.multiple_users_silhouette;
+            this.btn_HoaDonNhap.Image = global::GUI.Properties.Resources.HD_imp;
             this.btn_HoaDonNhap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_HoaDonNhap.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_HoaDonNhap.Location = new System.Drawing.Point(3, 621);
@@ -120,10 +168,10 @@
             this.btn_NguyenLieu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_NguyenLieu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NguyenLieu.ForeColor = System.Drawing.Color.White;
-            this.btn_NguyenLieu.Image = global::GUI.Properties.Resources.multiple_users_silhouette;
+            this.btn_NguyenLieu.Image = global::GUI.Properties.Resources.c_invoice;
             this.btn_NguyenLieu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_NguyenLieu.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_NguyenLieu.Location = new System.Drawing.Point(0, 565);
+            this.btn_NguyenLieu.Location = new System.Drawing.Point(0, 509);
             this.btn_NguyenLieu.Name = "btn_NguyenLieu";
             this.btn_NguyenLieu.Size = new System.Drawing.Size(199, 50);
             this.btn_NguyenLieu.TabIndex = 9;
@@ -162,7 +210,7 @@
             this.btn_NhanVien.Image = global::GUI.Properties.Resources.multiple_users_silhouette;
             this.btn_NhanVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_NhanVien.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_NhanVien.Location = new System.Drawing.Point(0, 509);
+            this.btn_NhanVien.Location = new System.Drawing.Point(0, 565);
             this.btn_NhanVien.Name = "btn_NhanVien";
             this.btn_NhanVien.Size = new System.Drawing.Size(199, 50);
             this.btn_NhanVien.TabIndex = 7;
@@ -178,7 +226,7 @@
             this.btn_HoaDon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_HoaDon.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_HoaDon.ForeColor = System.Drawing.Color.White;
-            this.btn_HoaDon.Image = global::GUI.Properties.Resources.shopping_list;
+            this.btn_HoaDon.Image = global::GUI.Properties.Resources.c_invoice;
             this.btn_HoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_HoaDon.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_HoaDon.Location = new System.Drawing.Point(0, 453);
@@ -227,15 +275,6 @@
             this.btn_NhaPhanPhoi.Text = "Nhà Phân Phối";
             this.btn_NhaPhanPhoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
-            this.guna2Panel2.Controls.Add(this.txt_name_admin);
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 208);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(202, 50);
-            this.guna2Panel2.TabIndex = 3;
-            // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = global::GUI.Properties.Resources.project_manager;
@@ -246,17 +285,6 @@
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 1;
             this.guna2PictureBox2.TabStop = false;
-            // 
-            // txt_name_admin
-            // 
-            this.txt_name_admin.AutoSize = true;
-            this.txt_name_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_admin.Location = new System.Drawing.Point(62, 10);
-            this.txt_name_admin.Name = "txt_name_admin";
-            this.txt_name_admin.Size = new System.Drawing.Size(102, 31);
-            this.txt_name_admin.TabIndex = 0;
-            this.txt_name_admin.Text = "ADMIN";
-            this.txt_name_admin.Click += new System.EventHandler(this.txt_name_admin_Click);
             // 
             // btn_NhaCungCap
             // 
@@ -288,34 +316,6 @@
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.guna2Panel3.Controls.Add(this.lbl_TieuDe);
-            this.guna2Panel3.Location = new System.Drawing.Point(199, -3);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1710, 50);
-            this.guna2Panel3.TabIndex = 1;
-            // 
-            // lbl_TieuDe
-            // 
-            this.lbl_TieuDe.AutoSize = true;
-            this.lbl_TieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TieuDe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_TieuDe.Location = new System.Drawing.Point(671, 9);
-            this.lbl_TieuDe.Name = "lbl_TieuDe";
-            this.lbl_TieuDe.Size = new System.Drawing.Size(322, 31);
-            this.lbl_TieuDe.TabIndex = 0;
-            this.lbl_TieuDe.Text = "Quản Lý Nhà Cung Cấp";
-            // 
-            // panel_NoiDung
-            // 
-            this.panel_NoiDung.Location = new System.Drawing.Point(206, 53);
-            this.panel_NoiDung.Name = "panel_NoiDung";
-            this.panel_NoiDung.Size = new System.Drawing.Size(1686, 976);
-            this.panel_NoiDung.TabIndex = 2;
-            this.panel_NoiDung.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_NoiDung_Paint);
-            // 
             // FrmTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,10 +330,10 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

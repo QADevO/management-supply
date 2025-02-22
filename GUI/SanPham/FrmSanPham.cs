@@ -174,6 +174,7 @@ namespace GUI.SanPham
             LoadingSanPham();
             dgv_DSSP.ColumnHeadersHeight = 40;
             dgv_loSP.ColumnHeadersHeight = 40;
+            dgv_loSP.ColumnHeadersHeight = 40;
         }
 
         private void LoadingSanPham()
