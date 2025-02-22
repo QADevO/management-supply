@@ -15,6 +15,7 @@ using GUI.SanPham;
 using GUI.DaiLy;
 using GUI.NguyenLieu;
 using GUI.HoaDonNhap;
+using BLL;
 
 namespace GUI.TrangChu
 {
@@ -94,6 +95,21 @@ namespace GUI.TrangChu
         {
             lbl_TieuDe.Text = "Hóa đơn nhập";
             AddControls(new FrmHoaDonNhap());
+        }
+
+        private void txt_name_admin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmTrangChu_Load(object sender, EventArgs e)
+        {
+            txt_name_admin.Text = CurrentUser.Username;
+        }
+
+        private void panel_NoiDung_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

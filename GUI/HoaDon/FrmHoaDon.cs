@@ -18,6 +18,7 @@ namespace GUI.HoaDon
         private BLL_SanPham BLL_SP = new BLL_SanPham();
         private BLL_LoSanPham BLL_LoSP = new BLL_LoSanPham();
         private BLL_DaiLy BLL_DaiLy = new BLL_DaiLy();
+        private BLL_HoaDon BLL_HoaDon = new BLL_HoaDon();
         public FrmHoaDon()
         {
             InitializeComponent();
@@ -209,12 +210,64 @@ namespace GUI.HoaDon
             }
         }
 
-       
+
 
         private void btn_createHoaDon_Click(object sender, EventArgs e)
         {
+            if (dgv_invoice_detail.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có sản phẩm nào trong hóa đơn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            if (cbb_listDaiLy.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn đại lý!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DTO.HoaDon hoaDon = new DTO.HoaDon
+            {
+                MaDL = Convert.ToInt32(cbb_listDaiLy.SelectedValue),
+                NgayLap = DateTime.Now,
+                TongTien = 0,
+                MaNhanVien = CurrentUser.UserID,
+            };
+
+            List<ChiTietHoaDon> chiTietHoaDons = new List<ChiTietHoaDon>();
+            double tongTien = 0;
+
+            foreach (DataGridViewRow row in dgv_invoice_detail.Rows)
+            {
+                if (row.Cells[0].Value != null)
+                {
+                    ChiTietHoaDon cthd = new ChiTietHoaDon
+                    {
+                        MaLoSP = Convert.ToInt32(row.Cells[0].Value),
+                        SoLuong = Convert.ToInt32(row.Cells[2].Value),
+                        DonGia = Convert.ToDouble(row.Cells[4].Value),
+                        ThanhTien = Convert.ToDouble(row.Cells[5].Value)
+                    };
+                    chiTietHoaDons.Add(cthd);
+                    tongTien += cthd.ThanhTien;
+                }
+            }
+
+            hoaDon.TongTien = tongTien;
+
+            bool result = BLL_HoaDon.TaoPhieuNhap(hoaDon, chiTietHoaDons);
+
+            if (result)
+            {
+                MessageBox.Show("Hóa đơn được tạo thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgv_invoice_detail.Rows.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi khi tạo hóa đơn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
     }
 }

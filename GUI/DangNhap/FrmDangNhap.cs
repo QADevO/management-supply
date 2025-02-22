@@ -39,11 +39,15 @@ namespace GUI.DangNhap
             }
 
             bool isLoginSuccessful = bll_nhanvien.login(email, password);
-
+            // Lấy thông tin user thay vì chỉ kiểm tra đăng nhập
+            var user = bll_nhanvien.GetUserByEmailAndPassword(email, password);
             if (isLoginSuccessful)
             {
                 MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                // Lưu thông tin vào biến tĩnh
+                CurrentUser.Username = user.HoTen;
+                CurrentUser.UserID = user.MaNV;
                 // Mở giao diện chính và đóng form đăng nhập
                 FrmTrangChu frmMain = new FrmTrangChu();
                 frmMain.Show();

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_HoaDonNhap = new Guna.UI2.WinForms.Guna2Button();
             this.btn_NguyenLieu = new Guna.UI2.WinForms.Guna2Button();
             this.btn_DangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.btn_NhanVien = new Guna.UI2.WinForms.Guna2Button();
@@ -37,13 +38,12 @@
             this.btn_NhaPhanPhoi = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txt_name_admin = new System.Windows.Forms.Label();
             this.btn_NhaCungCap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbl_TieuDe = new System.Windows.Forms.Label();
             this.panel_NoiDung = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_HoaDonNhap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -68,6 +68,26 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(202, 1046);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btn_HoaDonNhap
+            // 
+            this.btn_HoaDonNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_HoaDonNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_HoaDonNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_HoaDonNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_HoaDonNhap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_HoaDonNhap.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HoaDonNhap.ForeColor = System.Drawing.Color.White;
+            this.btn_HoaDonNhap.Image = global::GUI.Properties.Resources.multiple_users_silhouette;
+            this.btn_HoaDonNhap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_HoaDonNhap.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_HoaDonNhap.Location = new System.Drawing.Point(3, 621);
+            this.btn_HoaDonNhap.Name = "btn_HoaDonNhap";
+            this.btn_HoaDonNhap.Size = new System.Drawing.Size(199, 50);
+            this.btn_HoaDonNhap.TabIndex = 10;
+            this.btn_HoaDonNhap.Text = "Hóa Đơn Nhập";
+            this.btn_HoaDonNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_HoaDonNhap.Click += new System.EventHandler(this.btn_HoaDonNhap_Click);
             // 
             // btn_NguyenLieu
             // 
@@ -187,7 +207,7 @@
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
-            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Controls.Add(this.txt_name_admin);
             this.guna2Panel2.Location = new System.Drawing.Point(0, 208);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(202, 50);
@@ -204,15 +224,16 @@
             this.guna2PictureBox2.TabIndex = 1;
             this.guna2PictureBox2.TabStop = false;
             // 
-            // label1
+            // txt_name_admin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ADMIN";
+            this.txt_name_admin.AutoSize = true;
+            this.txt_name_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_admin.Location = new System.Drawing.Point(62, 10);
+            this.txt_name_admin.Name = "txt_name_admin";
+            this.txt_name_admin.Size = new System.Drawing.Size(102, 31);
+            this.txt_name_admin.TabIndex = 0;
+            this.txt_name_admin.Text = "ADMIN";
+            this.txt_name_admin.Click += new System.EventHandler(this.txt_name_admin_Click);
             // 
             // btn_NhaCungCap
             // 
@@ -270,26 +291,7 @@
             this.panel_NoiDung.Name = "panel_NoiDung";
             this.panel_NoiDung.Size = new System.Drawing.Size(1686, 976);
             this.panel_NoiDung.TabIndex = 2;
-            // 
-            // btn_HoaDonNhap
-            // 
-            this.btn_HoaDonNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_HoaDonNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_HoaDonNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_HoaDonNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_HoaDonNhap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_HoaDonNhap.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HoaDonNhap.ForeColor = System.Drawing.Color.White;
-            this.btn_HoaDonNhap.Image = global::GUI.Properties.Resources.multiple_users_silhouette;
-            this.btn_HoaDonNhap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_HoaDonNhap.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_HoaDonNhap.Location = new System.Drawing.Point(3, 621);
-            this.btn_HoaDonNhap.Name = "btn_HoaDonNhap";
-            this.btn_HoaDonNhap.Size = new System.Drawing.Size(199, 50);
-            this.btn_HoaDonNhap.TabIndex = 10;
-            this.btn_HoaDonNhap.Text = "Hóa Đơn Nhập";
-            this.btn_HoaDonNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_HoaDonNhap.Click += new System.EventHandler(this.btn_HoaDonNhap_Click);
+            this.panel_NoiDung.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_NoiDung_Paint);
             // 
             // FrmTrangChu
             // 
@@ -301,6 +303,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "FrmTrangChu";
             this.Text = "FrmTrangChu";
+            this.Load += new System.EventHandler(this.FrmTrangChu_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
@@ -318,7 +321,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txt_name_admin;
         private Guna.UI2.WinForms.Guna2Button btn_NhaCungCap;
         private Guna.UI2.WinForms.Guna2Button btn_NhaPhanPhoi;
         private Guna.UI2.WinForms.Guna2Button btn_SanPham;
