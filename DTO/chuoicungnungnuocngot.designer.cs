@@ -63,7 +63,7 @@ namespace DTO
     #endregion
 		
 		public chuoicungnungnuocngotDataContext() : 
-				base(global::DTO.Properties.Settings.Default.ChuoiCungUngNuocNgotConnectionString2, mappingSource)
+				base(global::DTO.Properties.Settings.Default.ChuoiCungUngNuocNgotConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -451,6 +451,8 @@ namespace DTO
 		
 		private System.Nullable<int> _SoLuongTon;
 		
+		private System.Nullable<decimal> _DonGia;
+		
 		private EntitySet<LoSanPham> _LoSanPhams;
 		
     #region Extensibility Method Definitions
@@ -465,6 +467,8 @@ namespace DTO
     partial void OnDonViTinhChanged();
     partial void OnSoLuongTonChanging(System.Nullable<int> value);
     partial void OnSoLuongTonChanged();
+    partial void OnDonGiaChanging(System.Nullable<decimal> value);
+    partial void OnDonGiaChanged();
     #endregion
 		
 		public SanPham()
@@ -549,6 +553,26 @@ namespace DTO
 					this._SoLuongTon = value;
 					this.SendPropertyChanged("SoLuongTon");
 					this.OnSoLuongTonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonGia", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> DonGia
+		{
+			get
+			{
+				return this._DonGia;
+			}
+			set
+			{
+				if ((this._DonGia != value))
+				{
+					this.OnDonGiaChanging(value);
+					this.SendPropertyChanging();
+					this._DonGia = value;
+					this.SendPropertyChanged("DonGia");
+					this.OnDonGiaChanged();
 				}
 			}
 		}

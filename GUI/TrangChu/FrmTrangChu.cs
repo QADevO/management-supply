@@ -16,7 +16,7 @@ using GUI.DaiLy;
 using GUI.NguyenLieu;
 using GUI.HoaDonNhap;
 using BLL;
-using GUI.NhapLo;
+using GUI.QL_HoaDOnNHap;
 
 namespace GUI.TrangChu
 {
@@ -50,7 +50,7 @@ namespace GUI.TrangChu
 
         private void Btn_HoaDon_Click(object sender, EventArgs e)
         {
-            lbl_TieuDe.Text = "Quản Lý Hóa Đơn";
+            lbl_TieuDe.Text = "Tạo Hóa đơn nhập";
             AddControls(new FrmHoaDon());
         }
 
@@ -101,8 +101,8 @@ namespace GUI.TrangChu
 
         private void btn_NhapLoHang_Click(object sender, EventArgs e)
         {
-            lbl_TieuDe.Text = "Nhập lô hàng";
-            AddControls(new FrmNhapLo());
+            lbl_TieuDe.Text = "Quản lý hóa đơn xuất";
+            AddControls(new Frm_QL_HoaDonXuat());
         }
 
         private void txt_name_admin_Click(object sender, EventArgs e)
@@ -120,6 +120,9 @@ namespace GUI.TrangChu
 
         }
 
-        
+        private void btn_HoaDon_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

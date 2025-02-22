@@ -21,5 +21,36 @@ namespace BLL
             return dalLoSanPham.GetLoSanPhamByMaSP(masp);
         }
 
+        public bool AddLoSanPham(LoSanPham loSanPham)
+        {
+            if (loSanPham == null || loSanPham.MaSP == 0 || loSanPham.SoLuong <= 0)
+            {
+                Console.WriteLine("Dữ liệu không hợp lệ!");
+                return false;
+            }
+            return dalLoSanPham.AddLoSanPham(loSanPham);
+        }
+
+        // Cập nhật lô sản phẩm
+        public bool UpdateLoSanPham(LoSanPham loSanPham)
+        {
+            if (loSanPham == null || loSanPham.MaLoSP == 0)
+            {
+                Console.WriteLine("Dữ liệu không hợp lệ để cập nhật!");
+                return false;
+            }
+            return dalLoSanPham.UpdateLoSanPham(loSanPham);
+        }
+
+        // Xóa lô sản phẩm
+        public bool DeleteLoSanPham(int maLo)
+        {
+            if (maLo <= 0)
+            {
+                Console.WriteLine("Mã lô sản phẩm không hợp lệ!");
+                return false;
+            }
+            return dalLoSanPham.DeleteLoSanPham(maLo);
+        }
     }
 }

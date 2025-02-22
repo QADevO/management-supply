@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ChuoiCungUngNuocNgot" Class="chuoicungnungnuocngotDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=XuanBinh\XuanBinh;Initial Catalog=ChuoiCungUngNuocNgot;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="ChuoiCungUngNuocNgotConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=NGUYENVANVUONG;Initial Catalog=ChuoiCungUngNuocNgot;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="ChuoiCungUngNuocNgotConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ChiTietHoaDon" Member="ChiTietHoaDons">
     <Type Name="ChiTietHoaDon">
       <Column Name="MaCTHD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -18,6 +18,7 @@
       <Column Name="TenSP" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
       <Column Name="DonViTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SoLuongTon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
       <Association Name="SanPham_LoSanPham" Member="LoSanPhams" ThisKey="MaSP" OtherKey="MaSP" Type="LoSanPham" />
     </Type>
   </Table>

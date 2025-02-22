@@ -15,6 +15,8 @@ namespace GUI.SanPham
     public partial class FrmSanPham : Form
     {
         public BLL_SanPham bll_sp = new BLL_SanPham();
+        private BLL_LoSanPham BLL_LoSP = new BLL_LoSanPham();
+
         public FrmSanPham()
         {
             InitializeComponent();
@@ -136,6 +138,7 @@ namespace GUI.SanPham
                 TenSP = txt_TenSP.Text.Trim(),
                 DonViTinh = txt_DonViTinh.Text.Trim(),
                 SoLuongTon = soLuongTon,
+                DonGia = decimal.Parse(txt_GiaBan.Text.Trim()), 
             };
 
             bool result = bll_sp.AddNewSP(newSP);
@@ -153,13 +156,24 @@ namespace GUI.SanPham
 
         private void dgv_DSSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                int maSP = Convert.ToInt32(dgv_DSSP.Rows[e.RowIndex].Cells["MaSP"].Value);
 
+                LoadLoSanPham(maSP);
+            }
         }
+        private void LoadLoSanPham(int maSP)
+        {
+            dgv_loSP.DataSource = BLL_LoSP.GetLoSanPhamByMaSP(maSP);
+        }
+
 
         private void FrmSanPham_Load(object sender, EventArgs e)
         {
             LoadingSanPham();
             dgv_DSSP.ColumnHeadersHeight = 40;
+            dgv_loSP.ColumnHeadersHeight = 40;
         }
 
         private void LoadingSanPham()
@@ -177,6 +191,7 @@ namespace GUI.SanPham
                 txt_TenSP.Text = row.Cells["TenSP"].Value.ToString();
                 txt_DonViTinh.Text = row.Cells["DonViTinh"].Value.ToString();
                 txt_SoLuongTon.Text = row.Cells["SoLuongTon"].Value.ToString();
+                txt_GiaBan.Text = row.Cells["DonGia"].Value.ToString();
             }
         }
 
@@ -186,6 +201,87 @@ namespace GUI.SanPham
             txt_TenSP.Clear();
             txt_DonViTinh.Clear();
             txt_SoLuongTon.Clear();
+        }
+
+       
+        private void dateTime_HSD_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTime_NSX_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_XoaSP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_capNhat_LoSP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_add_LoSP_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem đã chọn sản phẩm chưa
+            if (string.IsNullOrEmpty(txt_MaSP.Text.Trim()) || !int.TryParse(txt_MaSP.Text.Trim(), out int maSP))
+            {
+                MessageBox.Show("Vui lòng chọn một sản phẩm hợp lệ trước khi thêm lô sản phẩm.");
+                return;
+            }
+
+            // Kiểm tra thông tin lô sản phẩm
+            if (string.IsNullOrEmpty(txt_SoLuongLo.Text.Trim()) || !int.TryParse(txt_SoLuongLo.Text.Trim(), out int soLuongLo) || soLuongLo <= 0)
+            {
+                MessageBox.Show("Số lượng lô sản phẩm không hợp lệ (phải là số nguyên dương).");
+                return;
+            }
+
+            // Lấy ngày sản xuất và hạn sử dụng
+            DateTime nsx = dateTime_NSX.Value;
+            DateTime hsd = dateTime_HSD.Value;
+
+            if (hsd <= nsx)
+            {
+                MessageBox.Show("Hạn sử dụng phải lớn hơn ngày sản xuất.");
+                return;
+            }
+
+            // Tạo đối tượng lô sản phẩm mới
+            DTO.LoSanPham loSP = new DTO.LoSanPham
+            {
+                MaSP = maSP,
+                SoLuong = soLuongLo,
+                NSX = nsx,
+                HSD = hsd
+            };
+
+            // Gọi BLL để thêm lô sản phẩm
+            bool result = BLL_LoSP.AddLoSanPham(loSP);
+
+            if (result)
+            {
+                MessageBox.Show("Thêm lô sản phẩm thành công!");
+                LoadLoSanPham(maSP); // Cập nhật danh sách lô sản phẩm
+            }
+            else
+            {
+                MessageBox.Show("Thêm lô sản phẩm thất bại! Vui lòng thử lại.");
+            }
+        }
+
+
+        private void txt_SoLuongLo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_GiaBan_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

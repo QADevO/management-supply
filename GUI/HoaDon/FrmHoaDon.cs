@@ -93,6 +93,8 @@ namespace GUI.HoaDon
                 DataGridViewRow row = dgv_loSanPham.Rows[e.RowIndex];
 
                 txt_MaLoHang.Text = row.Cells["MaLoSP"].Value?.ToString();
+                txt_SoLongTon.Text = row.Cells["SoLuong"].Value?.ToString();
+
             }
         }
         private void dgv_SP_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -138,6 +140,8 @@ namespace GUI.HoaDon
 
         private void btn_add_loSP_Click(object sender, EventArgs e)
         {
+
+
             // Kiểm tra xem tất cả các trường dữ liệu có được nhập không
             if (string.IsNullOrWhiteSpace(txt_MaLoHang.Text) ||
                 string.IsNullOrWhiteSpace(txt_TenSP.Text) ||
@@ -155,10 +159,19 @@ namespace GUI.HoaDon
                 MessageBox.Show("Số lượng bán phải là số nguyên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            if (!int.TryParse(txt_SoLongTon.Text, out int soLuongTon))
+            {
+                MessageBox.Show("Số lượng tồn phải là số nguyên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (!decimal.TryParse(txt_Gia.Text, out decimal gia))
             {
                 MessageBox.Show("Giá phải là số!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (soLuongMoi > soLuongTon)
+            {
+                MessageBox.Show("Số lượng bán không được vượt quá số lượng tồn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -272,6 +285,14 @@ namespace GUI.HoaDon
             }
         }
 
+        private void txt_SoLongTon_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,5 +39,16 @@ namespace DAL
                 }
             }
         }
+        public List<HoaDon> GetDanhSachPhieuXuat()
+        {
+            return sql.HoaDons.ToList();
+        }
+
+        public List<ChiTietHoaDon> GetChiTietPhieuXuat(int maHD)
+        {
+            return sql.ChiTietHoaDons.Where(ct => ct.MaHD == maHD).ToList();
+        }
+
+
     }
 }

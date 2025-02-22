@@ -54,6 +54,7 @@
     <Compile Include="BLL_NhaCungCap.cs" />
     <Compile Include="BLL_NhanVien.cs" />
     <Compile Include="BLL_PhieuNhap.cs" />
+    <Compile Include="BLL_PhieuXuat.cs" />
     <Compile Include="BLL_SanPham.cs" />
     <Compile Include="CurrentUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

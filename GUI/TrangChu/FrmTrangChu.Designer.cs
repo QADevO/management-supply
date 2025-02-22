@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_NhapLoHang = new Guna.UI2.WinForms.Guna2Button();
             this.btn_HoaDonNhap = new Guna.UI2.WinForms.Guna2Button();
             this.btn_NguyenLieu = new Guna.UI2.WinForms.Guna2Button();
             this.btn_DangXuat = new Guna.UI2.WinForms.Guna2Button();
@@ -44,7 +45,6 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbl_TieuDe = new System.Windows.Forms.Label();
             this.panel_NoiDung = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_NhapLoHang = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -70,6 +70,26 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(202, 1046);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btn_NhapLoHang
+            // 
+            this.btn_NhapLoHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_NhapLoHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_NhapLoHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_NhapLoHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_NhapLoHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_NhapLoHang.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NhapLoHang.ForeColor = System.Drawing.Color.White;
+            this.btn_NhapLoHang.Image = global::GUI.Properties.Resources.multiple_users_silhouette;
+            this.btn_NhapLoHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_NhapLoHang.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_NhapLoHang.Location = new System.Drawing.Point(3, 677);
+            this.btn_NhapLoHang.Name = "btn_NhapLoHang";
+            this.btn_NhapLoHang.Size = new System.Drawing.Size(199, 50);
+            this.btn_NhapLoHang.TabIndex = 11;
+            this.btn_NhapLoHang.Text = "Hóa đơn Xuất";
+            this.btn_NhapLoHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_NhapLoHang.Click += new System.EventHandler(this.btn_NhapLoHang_Click);
             // 
             // btn_HoaDonNhap
             // 
@@ -107,7 +127,7 @@
             this.btn_NguyenLieu.Name = "btn_NguyenLieu";
             this.btn_NguyenLieu.Size = new System.Drawing.Size(199, 50);
             this.btn_NguyenLieu.TabIndex = 9;
-            this.btn_NguyenLieu.Text = "Nguyên Liệu";
+            this.btn_NguyenLieu.Text = "Tạo HĐ nhập";
             this.btn_NguyenLieu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_NguyenLieu.Click += new System.EventHandler(this.btn_NguyenLieu_Click);
             // 
@@ -165,8 +185,9 @@
             this.btn_HoaDon.Name = "btn_HoaDon";
             this.btn_HoaDon.Size = new System.Drawing.Size(199, 50);
             this.btn_HoaDon.TabIndex = 6;
-            this.btn_HoaDon.Text = "Hóa Đơn";
+            this.btn_HoaDon.Text = "Tạo HĐ Xuất";
             this.btn_HoaDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click_1);
             // 
             // btn_SanPham
             // 
@@ -294,26 +315,6 @@
             this.panel_NoiDung.Size = new System.Drawing.Size(1686, 976);
             this.panel_NoiDung.TabIndex = 2;
             this.panel_NoiDung.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_NoiDung_Paint);
-            // 
-            // btn_NhapLoHang
-            // 
-            this.btn_NhapLoHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_NhapLoHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_NhapLoHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_NhapLoHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_NhapLoHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_NhapLoHang.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NhapLoHang.ForeColor = System.Drawing.Color.White;
-            this.btn_NhapLoHang.Image = global::GUI.Properties.Resources.multiple_users_silhouette;
-            this.btn_NhapLoHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_NhapLoHang.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_NhapLoHang.Location = new System.Drawing.Point(3, 677);
-            this.btn_NhapLoHang.Name = "btn_NhapLoHang";
-            this.btn_NhapLoHang.Size = new System.Drawing.Size(199, 50);
-            this.btn_NhapLoHang.TabIndex = 11;
-            this.btn_NhapLoHang.Text = "Nhập Lô Hàng";
-            this.btn_NhapLoHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_NhapLoHang.Click += new System.EventHandler(this.btn_NhapLoHang_Click);
             // 
             // FrmTrangChu
             // 
